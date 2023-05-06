@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Logo2.png">
+    <title>Tierna</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #181818;
+    }
+
+    .frem {
+        width: 31rem;
+        height: 17rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 23px;
+        box-shadow: 0px 0px 20px #7fffd4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .border {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200%;
+        width: 200%;
+        overflow: hidden;
+        background: linear-gradient(to right, #303030 20%, #303030 40%, #ff00a5 50%, #ff2f00 55%, #004eff 70%, #00ffdc 100%);
+        background-size: 200% auto;
+        animation: shine 3s linear infinite;
+        transform: rotate(-45deg);
+    }
+
+    .border::before {
+        content: "♡♥ Tu eres para mi la mas bella poesia de la vida. ♡♥";
+        position: absolute;
+        height: 250px;
+        width: 470px;
+        border-radius: 23px;
+        background: #181818;
+        z-index: 1;
+        box-shadow: inset 20px 15px 20px #00000059;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(45deg);
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #d72a3e;
+        font-family: cursive;
+    }
+
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    @media(max-width:801px) {
+
+        .frem,
+        .border,
+        .border::before {
+            font-size: 2rem;
+            content: "♡♥ Eres mi unico pensamiento, mi razon de existir. ♡♥";
+        }
+    }
+
+    @media(max-width:500px) {
+
+        .frem,
+        .border,
+        .border::before {
+
+            font-size: 1rem;
+            width: 25rem;
+            content: "♡ Eres la luz que ilumina mi camino, la musica que llena mi alma. ♥";
+
+        }
+    }
+</style>
+
+<body>
+    <div class="frem">
+        <dive class="border"></dive>
+    </div>
+</body>
+
+</html>

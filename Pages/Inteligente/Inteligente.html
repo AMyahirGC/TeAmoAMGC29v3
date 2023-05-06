@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Logo2.png">
+    <title>Inteligente</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #CC95C0;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div::before {
+        content: "";
+        background-image: conic-gradient(#c531e7 20deg,
+                transparent 120deg);
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        animation: rotate 2s linear infinite;
+    }
+
+    div::after {
+        content: "Tu amor es mi alegria, tu sonrisa mi luz, contigo a mi lado nunca estare perdido.";
+        width: 190px;
+        height: 190px;
+        background: #101010;
+        position: absolute;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #7fffd4;
+        font-size: larger;
+        box-shadow: inset 20px 20px 20px #0000008c;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    @media (max-width:800px) {
+
+        .before,
+        .after {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:200px) {
+
+        .before,
+        .after {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>
